@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.pharmaonecaja.controller.VentaController">
+
+    <!-- MENU LATERAL -->
+    <VBox prefWidth="200"
+          spacing="15"
+          style="-fx-background-color: #5D737E; -fx-padding:20;">
+
+        <ImageView fitHeight="120" preserveRatio="true">
+            <image>
+                <Image url="@../img/pharmaOne.png"/>
+            </image>
+        </ImageView>
+
+        <Separator/>
+
+        <Button text="Ventas"
+                prefWidth="160"
+                style="-fx-background-color:#64B6AC; -fx-text-fill:white;"/>
+
+        <Button text="Historial Ventas"
+                prefWidth="160"
+                onAction="#abrirHistorial"
+                style="-fx-background-color:#DAFFEF;"/>
+
+        <Button text="Cierre de Caja"
+                prefWidth="160"
+                onAction="#cerrarCaja"
+                style="-fx-background-color:#FCFFFD;"/>
+
+    </VBox>
+
+
+    <!-- CONTENIDO -->
+    <BorderPane prefWidth="900">
+
+
+        <!-- BUSCADOR PRODUCTO -->
+        <top>
+
+            <HBox spacing="10" style="-fx-padding:15;">
+
+                <TextField fx:id="txtBuscar"
+                           promptText="Buscar producto..."
+                           HBox.hgrow="ALWAYS"/>
+
+                <Button text="Agregar"
+                        onAction="#agregarProducto"/>
+
+            </HBox>
+
+        </top>
+
+
+        <!-- TABLA PRODUCTOS -->
+        <center>
+
+            <TableView fx:id="tablaVenta">
+
+                <columns>
+
+                    <TableColumn fx:id="colImagen"
+                                 text="Foto"
+                                 prefWidth="80"/>
+
+                    <TableColumn fx:id="colProducto"
+                                 text="Producto"
+                                 prefWidth="250"/>
+
+                    <TableColumn fx:id="colCantidad"
+                                 text="Cantidad"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="colPrecio"
+                                 text="Precio"
+                                 prefWidth="120"/>
+
+                    <TableColumn fx:id="colSubtotal"
+                                 text="Subtotal"
+                                 prefWidth="120"/>
+
+                </columns>
+
+            </TableView>
+
+        </center>
+
+
+        <!-- PANEL DERECHO -->
+        <right>
+
+            <VBox spacing="12"
+                  prefWidth="260"
+                  style="-fx-background-color:#F4F6F8; -fx-padding:20;">
+
+
+                <!-- BUSCAR CLIENTE -->
+                <HBox spacing="5">
+
+                    <TextField fx:id="txtCliente"
+                               promptText="ID Cliente"
+                               HBox.hgrow="ALWAYS"/>
+
+                    <Button text="Buscar"
+                            onAction="#buscarCliente"/>
+
+                    <Button fx:id="btnNuevaMembresia"
+                            text="Nueva Membresía"
+                            onAction="#abrirRegistroCliente"/>
+
+                </HBox>
+
+
+                <!-- INFO CLIENTE -->
+                <Label fx:id="lblCliente"
+                       text="Cliente: Público"
+                       style="-fx-font-size:14;"/>
+
+
+                <!-- MEMBRESIA -->
+                <Label fx:id="lblMembresia"
+                       text="Membresía: Ninguna"
+                       style="-fx-font-size:14;"/>
+
+
+                <!-- DESCUENTO -->
+                <Label fx:id="lblDescuento"
+                       text="Descuento: 0%"
+                       style="-fx-font-size:14;"/>
+
+
+                <Separator/>
+
+
+                <!-- TOTAL -->
+                <Label text="Total"
+                       style="-fx-font-size:16;"/>
+
+                <Label fx:id="lblTotal"
+                       text="0.00"
+                       style="-fx-font-size:28; -fx-font-weight:bold;"/>
+
+
+                <!-- METODO PAGO -->
+                <ComboBox fx:id="cmbTipoPago"
+                          prefWidth="200"/>
+
+
+                <!-- FINALIZAR -->
+                <Button text="Finalizar Venta"
+                        prefWidth="200"
+                        onAction="#finalizarVenta"
+                        style="-fx-background-color:#64B6AC; -fx-text-fill:white;"/>
+
+            </VBox>
+
+        </right>
+
+    </BorderPane>
+
+</HBox>

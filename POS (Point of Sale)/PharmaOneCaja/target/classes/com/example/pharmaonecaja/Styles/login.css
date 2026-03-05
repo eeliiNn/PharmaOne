@@ -1,0 +1,47 @@
+.root {
+    -fx-font-family: "Segoe UI";
+}
+
+/* Panel izquierdo */
+.left-panel {
+    -fx-background-color: linear-gradient(to bottom, #C0FDFB, #64B6AC);
+    -fx-pref-width: 350;
+    -fx-padding: 40;
+}
+
+.title {
+    -fx-text-fill: #64B6AC;
+    -fx-font-size: 50px;
+}
+
+/* Panel derecho */
+.right-panel {
+    -fx-background-color: #FFFF;
+    -fx-pref-width: 350;
+    -fx-padding: 60;
+}
+
+/* Inputs */
+.input {
+    -fx-pref-width: 250;
+    -fx-pref-height: 40;
+    -fx-background-color: #FFFF;
+    -fx-border-color: #5D737E;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 0 10 0 10;
+}
+
+/* Botón */
+.login-button {
+    -fx-pref-width: 250;
+    -fx-pref-height: 40;
+    -fx-background-color: #64B6AC;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+}
+
+.login-button:hover {
+    -fx-background-color: #5D737E;
+}

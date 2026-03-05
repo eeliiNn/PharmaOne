@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.pharmaonecaja.controller.HistorialController">
+
+    <!-- MENU LATERAL -->
+    <left>
+        <VBox prefWidth="200"
+              spacing="15"
+              style="-fx-background-color: #5D737E; -fx-padding:20;">
+
+            <ImageView fitHeight="120" preserveRatio="true">
+                <image>
+                    <Image url="@../img/pharmaOne.png"/>
+                </image>
+            </ImageView>
+
+            <Separator/>
+
+            <Button text="Ventas"
+                    prefWidth="160"
+                    onAction="#abrirVentas"
+                    style="-fx-background-color:#64B6AC; -fx-text-fill:white;"/>
+
+            <Button text="Historial Ventas"
+                    prefWidth="160"
+                    style="-fx-background-color:#DAFFEF;"/>
+
+            <Button text="Cierre de Caja"
+                    prefWidth="160"
+                    onAction="#cerrarCaja"
+                    style="-fx-background-color:#FCFFFD;"/>
+
+        </VBox>
+    </left>
+
+    <!-- CONTENIDO -->
+    <center>
+
+        <VBox spacing="10" style="-fx-padding:20;">
+
+            <!-- FILTROS -->
+            <HBox spacing="10">
+
+                <TextField fx:id="txtBuscarId"
+                           promptText="Buscar venta por ID"/>
+
+                <DatePicker fx:id="dpFecha"/>
+
+                <Button text="Filtrar"
+                        onAction="#filtrarVentas"/>
+
+                <Button text="Mostrar Todas"
+                        onAction="#cargarVentas"/>
+
+            </HBox>
+
+            <!-- TABLA -->
+            <TableView fx:id="tablaVentas">
+
+                <columns>
+
+                    <TableColumn fx:id="colId"
+                                 text="ID"
+                                 prefWidth="80"/>
+
+                    <TableColumn fx:id="colFecha"
+                                 text="Fecha"
+                                 prefWidth="200"/>
+
+                    <TableColumn fx:id="colTipoPago"
+                                 text="Pago"
+                                 prefWidth="150"/>
+
+                    <TableColumn fx:id="colTotal"
+                                 text="Total"
+                                 prefWidth="150"/>
+
+                    <TableColumn fx:id="colDescuento"
+                                 text="Descuento"
+                                 prefWidth="150"/>
+
+                </columns>
+
+            </TableView>
+
+            <!-- TOTAL -->
+            <HBox spacing="10">
+
+                <Label text="Total vendido:"/>
+
+                <Label fx:id="lblTotalVentas"
+                       text="0.00"
+                       style="-fx-font-size:18; -fx-font-weight:bold;"/>
+
+            </HBox>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

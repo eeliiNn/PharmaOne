@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.pharmaonecaja.controller.RegistroClienteController"
+      spacing="15"
+      alignment="CENTER"
+      style="-fx-padding:25; -fx-background-color:white;">
+
+    <Label text="Registrar Cliente"
+           style="-fx-font-size:18; -fx-font-weight:bold;" />
+
+    <GridPane hgap="10" vgap="10">
+
+        <Label text="Usuario:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtUsuario"
+                   GridPane.rowIndex="0"
+                   GridPane.columnIndex="1"
+                   prefWidth="200"/>
+
+        <Label text="Password:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="txtPassword"
+                       GridPane.rowIndex="1"
+                       GridPane.columnIndex="1"/>
+
+        <Label text="Nombre:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtNombre"
+                   GridPane.rowIndex="2"
+                   GridPane.columnIndex="1"/>
+
+        <Label text="Apellidos:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtApellidos"
+                   GridPane.rowIndex="3"
+                   GridPane.columnIndex="1"/>
+
+        <Label text="Teléfono:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtTelefono"
+                   GridPane.rowIndex="4"
+                   GridPane.columnIndex="1"/>
+
+        <Label text="Dirección:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtDireccion"
+                   GridPane.rowIndex="5"
+                   GridPane.columnIndex="1"/>
+
+        <Label text="Tipo Membresía:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="cmbMembresia"
+                  GridPane.rowIndex="6"
+                  GridPane.columnIndex="1"
+                  prefWidth="200"/>
+
+        <Label text="Fecha Fin:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="dpFechaFin"
+                    GridPane.rowIndex="7"
+                    GridPane.columnIndex="1"/>
+
+    </GridPane>
+
+    <Button text="Registrar Cliente"
+            onAction="#registrarCliente"
+            prefWidth="200"
+            style="-fx-background-color:#64B6AC; -fx-text-fill:white;"/>
+
+</VBox>

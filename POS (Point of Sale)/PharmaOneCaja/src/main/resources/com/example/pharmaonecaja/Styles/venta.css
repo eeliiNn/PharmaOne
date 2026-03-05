@@ -1,0 +1,115 @@
+.root{
+    -fx-font-family: "Segoe UI";
+}
+
+/* MENU */
+
+.menu-lateral{
+    -fx-background-color: #2F3E46;
+    -fx-padding: 20;
+}
+
+.btn-menu{
+    -fx-background-color: #3A5A40;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-background-radius: 8;
+}
+
+.btn-menu:hover{
+    -fx-background-color: #588157;
+}
+
+.btn-menu-sec{
+    -fx-background-color: #A3B18A;
+    -fx-background-radius: 8;
+}
+
+.btn-menu-sec:hover{
+    -fx-background-color: #B7C9A8;
+}
+
+
+/* BUSCADOR */
+
+.barra-busqueda{
+    -fx-padding: 15;
+    -fx-background-color: white;
+}
+
+.campo{
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #DCDCDC;
+}
+
+.btn-agregar{
+    -fx-background-color: #52B788;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+}
+
+
+/* TABLA */
+
+.tabla-ventas{
+    -fx-background-radius: 10;
+}
+
+.table-view{
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header{
+    -fx-background-color: #F1F3F5;
+}
+
+
+/* PANEL DERECHO */
+
+.panel-venta{
+    -fx-background-color: #F8F9FA;
+    -fx-padding: 20;
+}
+
+.info-label{
+    -fx-font-size: 14;
+}
+
+.titulo-total{
+    -fx-font-size: 16;
+}
+
+.total{
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2D6A4F;
+}
+
+.combo{
+    -fx-background-radius: 6;
+}
+
+
+/* BOTONES */
+
+.btn-buscar{
+    -fx-background-color: #4CC9F0;
+    -fx-text-fill: white;
+}
+
+.btn-membresia{
+    -fx-background-color: #F72585;
+    -fx-text-fill: white;
+}
+
+.btn-finalizar{
+    -fx-background-color: #40916C;
+    -fx-text-fill: white;
+    -fx-font-size: 16;
+    -fx-background-radius: 8;
+}
+
+.btn-finalizar:hover{
+    -fx-background-color: #2D6A4F;
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.pharmaonecaja.controller.LoginController"
+      stylesheets="@Styles/login.css">
+
+    <!-- LADO IZQUIERDO -->
+    <VBox alignment="CENTER" spacing="20" styleClass="left-panel">
+        <ImageView fitHeight="320" preserveRatio="true">
+            <image>
+                <Image url="@img/pharmaOne.png"/>
+            </image>
+        </ImageView>
+    </VBox>
+
+    <!-- LADO DERECHO -->
+    <VBox alignment="CENTER" spacing="15" styleClass="right-panel">
+        <!--<Label text="LOGIN" styleClass="title" /> -->
+        <ImageView fitHeight="100" preserveRatio="true">
+            <image>
+                <Image url="@img/userLogo.png"/>
+            </image>
+        </ImageView>
+
+        <TextField fx:id="txtUsuario" promptText="Usuario" styleClass="input"/>
+
+        <PasswordField fx:id="txtPassword" promptText="Contraseña" styleClass="input"/>
+
+        <Button text="INICIAR SESIÓN"
+                onAction="#login"
+                styleClass="login-button"/>
+
+    </VBox>
+
+</HBox>
